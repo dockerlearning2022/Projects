@@ -12,10 +12,12 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private long id;
 	
 	@Column(name = "user_name")
 	private String name;
+	
+	
 	
 	private int age;
 	
@@ -23,6 +25,20 @@ public class User {
 	private String City;
 	
 	private String Gender;
+	
+	private String emailid;
+	
+	private int mobileno;
+	
+	private int Deptid;
+	
+	private int salary;
+	
+	private String Organization;
+	
+	
+	
+	
 	
 	
 	public User() {
@@ -32,27 +48,33 @@ public class User {
 
 
 
-
-
-	public User(int id, String name, int age, String city, String gender) {
+	public User(long id, String name, int age, String city, String gender, String emailid, int mobileno, int deptid,
+			int salary, String organization) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		City = city;
 		Gender = gender;
+		this.emailid = emailid;
+		this.mobileno = mobileno;
+		Deptid = deptid;
+		this.salary = salary;
+		Organization = organization;
 	}
 
 
 
 
 
-	public int getId() {
+
+
+	public long getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -95,16 +117,86 @@ public class User {
 	public void setGender(String gender) {
 		Gender = gender;
 	}
+	
+	
+
+
+	public String getEmailid() {
+		return emailid;
+	}
+
+
+
+
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+
+
+
+
+	public int getMobileno() {
+		return mobileno;
+	}
+
+
+
+
+	public void setMobileno(int mobileno) {
+		this.mobileno = mobileno;
+	}
+
+
+
+
+	public int getDeptid() {
+		return Deptid;
+	}
+
+
+
+
+	public void setDeptid(int deptid) {
+		Deptid = deptid;
+	}
+	
+
+	public int getSalary() {
+		return salary;
+	}
+
+
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+
+
+	public String getOrganization() {
+		return Organization;
+	}
+
+
+
+	public void setOrganization(String organization) {
+		Organization = organization;
+	}
+
 
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", age=" + age + ", Gender=" + Gender + "]";
+		return "User [id=" + id + ", name=" + name + ", age=" + age + ", City=" + City + ", Gender=" + Gender
+				+ ", emailid=" + emailid + ", mobileno=" + mobileno + ", Deptid=" + Deptid + ", salary=" + salary
+				+ ", Organization=" + Organization + "]";
 	}
+
+
+
+
+
 	
-	
-	
-	
-	
+
 
 }
