@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<p>This is a paragraph.</p>
+
+<h2>HTML Links</h2>
+<p>HTML links are defined with the a tag:</p>
+
+<a href="https://github.com/dockerlearning2022/Projects.git">This is my github link</a>
+
+<h2>HTML Images</h2>
+<p>HTML images are defined with the img tag:</p>
+
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+
+<h2>HTML Buttons</h2>
+<p>HTML buttons are defined with the button tag:</p>
+
+<button>Click me</button>
+
+
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:50px;">I am big</p>
+
+<h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+
+
+</body>
+</html>
+
