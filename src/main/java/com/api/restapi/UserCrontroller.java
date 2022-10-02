@@ -18,8 +18,8 @@ import com.api.restapi.entity.repository.UserRepository;
 @RestController
 public class UserCrontroller {
 	
-	@Autowired
-	UserRepository userRepository;
+	@Autowired  //Automatically it will create a object for us.For this no need of new keyword
+	UserRepository userRepository;    //Object created
 	
 	@GetMapping("/users")
 	public List<User> getStudent(){
@@ -66,6 +66,11 @@ public class UserCrontroller {
 		updateUserData.setAge(user.getAge());
 		updateUserData.setGender(user.getGender());
 		updateUserData.setCity(user.getCity());
+		updateUserData.setEmailid(user.getEmailid());
+		updateUserData.setMobileno(user.getMobileno());
+		updateUserData.setDeptid(user.getDeptid());
+		updateUserData.setSalary(user.getSalary());
+		updateUserData.setOrganization(user.getOrganization());
 		
 		
 		User dbUser = userRepository.save(user);
